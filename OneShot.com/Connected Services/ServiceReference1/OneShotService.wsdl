@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OneShotService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53584/OneShotService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53584/OneShotService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53584/OneShotService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cyber_Knights_Service" />
+      <xsd:import schemaLocation="http://localhost:53584/OneShotService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOneShotService_GetPromoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromoByID" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPromoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_deleteItemFromDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteItemFromDB" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_deleteItemFromDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteItemFromDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getItemOnPromobyCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getItemOnPromobyCode" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getItemOnPromobyCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getItemOnPromobyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_removeFromPromo_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromPromo" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_removeFromPromo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromPromoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeletePromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePromotion" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeletePromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getCatByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCatByID" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getCatByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCatByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getPromoCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPromoCode" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getPromoCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPromoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_deletUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletUser" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_deletUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItem" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItembyCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItembyCategory" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItembyCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItembyCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItem" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddLineGraphInfor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineGraphInfor" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddLineGraphInfor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineGraphInforResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddPieChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPieChart" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddPieChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPieChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetLineGraphData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineGraphData" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetLineGraphData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineGraphDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPieChartData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPieChartData" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPieChartData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPieChartDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetColumnGraphData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColumnGraphData" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetColumnGraphData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColumnGraphDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPromotion" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPromotions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotions" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPromotions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPromotionByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionByName" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetPromotionByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsByPromo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsByPromo" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsByPromo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsByPromoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemPromo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPromo" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemPromo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPromoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItemOnPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemOnPromotion" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItemOnPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemOnPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_EditPromotionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPromotionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_EditPromotionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPromotionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategory" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnPromotions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnPromotions" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnPromotions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnPromotionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddress" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_addItemReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:addItemReview" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_addItemReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addItemReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ADDNEWReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADDNEWReview" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ADDNEWReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADDNEWReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviews" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddVisitor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVisitor" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddVisitor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVisitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddRegisteredUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegisteredUser" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddRegisteredUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegisteredUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddOderedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOderedUser" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddOderedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOderedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_addItemOnList_InputMessage">
+    <wsdl:part name="parameters" element="tns:addItemOnList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_addItemOnList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addItemOnListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCustomerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCustomerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeletItemONList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletItemONList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeletItemONList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletItemONListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnCust_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnCust" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnCust_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnCustResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeleteAllOnList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllOnList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeleteAllOnList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllOnListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddCartQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCartQty" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddCartQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCartQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ADDItemWithQTY_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADDItemWithQTY" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ADDItemWithQTY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADDItemWithQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOnCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnCart" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOnCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getItemsonCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:getItemsonCart" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_getItemsonCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getItemsonCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ReduceItemQTY_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReduceItemQTY" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ReduceItemQTY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReduceItemQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeleteItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItem" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_DeleteItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_RmoveAllFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:RmoveAllFromCart" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_RmoveAllFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RmoveAllFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_MinuesCartQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:MinuesCartQty" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_MinuesCartQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinuesCartQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnCart" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemOnCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemOnCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCategorynames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorynames" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetCategorynames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorynamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUserTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetUserTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItemOnOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemOnOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_AddItemOnOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemOnOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateOrderStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateOrderStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsOnOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsOnOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsOnOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsOnOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOrderByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderByID" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetOrderByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessages" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_NewMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewMessage" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_NewMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateMessageStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UpdateMessageStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetMessagesDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetMessagesDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ClearList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_ClearList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_IsRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_IsRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UserIDRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserIDRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_UserIDRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserIDRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsONcustomerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsONcustomerList" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_GetItemsONcustomerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsONcustomerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_EditPromoStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPromoStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOneShotService_EditPromoStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPromoStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOneShotService">
+    <wsdl:operation name="GetPromoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetPromoByID" message="tns:IOneShotService_GetPromoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetPromoByIDResponse" message="tns:IOneShotService_GetPromoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemFromDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/deleteItemFromDB" message="tns:IOneShotService_deleteItemFromDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/deleteItemFromDBResponse" message="tns:IOneShotService_deleteItemFromDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getItemOnPromobyCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/getItemOnPromobyCode" message="tns:IOneShotService_getItemOnPromobyCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/getItemOnPromobyCodeResponse" message="tns:IOneShotService_getItemOnPromobyCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromPromo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/removeFromPromo" message="tns:IOneShotService_removeFromPromo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/removeFromPromoResponse" message="tns:IOneShotService_removeFromPromo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/DeletePromotion" message="tns:IOneShotService_DeletePromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/DeletePromotionResponse" message="tns:IOneShotService_DeletePromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCatByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/getCatByID" message="tns:IOneShotService_getCatByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/getCatByIDResponse" message="tns:IOneShotService_getCatByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPromoCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/getPromoCode" message="tns:IOneShotService_getPromoCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/getPromoCodeResponse" message="tns:IOneShotService_getPromoCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/deletUser" message="tns:IOneShotService_deletUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/deletUserResponse" message="tns:IOneShotService_deletUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItems" message="tns:IOneShotService_GetItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemsResponse" message="tns:IOneShotService_GetItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItem" message="tns:IOneShotService_GetItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemResponse" message="tns:IOneShotService_GetItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetUser" message="tns:IOneShotService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetUserResponse" message="tns:IOneShotService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetUsers" message="tns:IOneShotService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetUsersResponse" message="tns:IOneShotService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/Login" message="tns:IOneShotService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/LoginResponse" message="tns:IOneShotService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/RegisterUser" message="tns:IOneShotService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/RegisterUserResponse" message="tns:IOneShotService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItembyCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItembyCategory" message="tns:IOneShotService_GetItembyCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItembyCategoryResponse" message="tns:IOneShotService_GetItembyCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddItem" message="tns:IOneShotService_AddItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddItemResponse" message="tns:IOneShotService_AddItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLineGraphInfor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddLineGraphInfor" message="tns:IOneShotService_AddLineGraphInfor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddLineGraphInforResponse" message="tns:IOneShotService_AddLineGraphInfor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPieChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddPieChart" message="tns:IOneShotService_AddPieChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddPieChartResponse" message="tns:IOneShotService_AddPieChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineGraphData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetLineGraphData" message="tns:IOneShotService_GetLineGraphData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetLineGraphDataResponse" message="tns:IOneShotService_GetLineGraphData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPieChartData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetPieChartData" message="tns:IOneShotService_GetPieChartData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetPieChartDataResponse" message="tns:IOneShotService_GetPieChartData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnGraphData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetColumnGraphData" message="tns:IOneShotService_GetColumnGraphData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetColumnGraphDataResponse" message="tns:IOneShotService_GetColumnGraphData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddPromotion" message="tns:IOneShotService_AddPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddPromotionResponse" message="tns:IOneShotService_AddPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetPromotions" message="tns:IOneShotService_GetPromotions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetPromotionsResponse" message="tns:IOneShotService_GetPromotions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetPromotionByName" message="tns:IOneShotService_GetPromotionByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetPromotionByNameResponse" message="tns:IOneShotService_GetPromotionByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByPromo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemsByPromo" message="tns:IOneShotService_GetItemsByPromo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemsByPromoResponse" message="tns:IOneShotService_GetItemsByPromo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPromo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemPromo" message="tns:IOneShotService_GetItemPromo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemPromoResponse" message="tns:IOneShotService_GetItemPromo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemOnPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddItemOnPromotion" message="tns:IOneShotService_AddItemOnPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddItemOnPromotionResponse" message="tns:IOneShotService_AddItemOnPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPromotionStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/EditPromotionStatus" message="tns:IOneShotService_EditPromotionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/EditPromotionStatusResponse" message="tns:IOneShotService_EditPromotionStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetCategory" message="tns:IOneShotService_GetCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetCategoryResponse" message="tns:IOneShotService_GetCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnPromotions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnPromotions" message="tns:IOneShotService_GetItemOnPromotions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnPromotionsResponse" message="tns:IOneShotService_GetItemOnPromotions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/UpdateAddress" message="tns:IOneShotService_UpdateAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/UpdateAddressResponse" message="tns:IOneShotService_UpdateAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addItemReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/addItemReview" message="tns:IOneShotService_addItemReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/addItemReviewResponse" message="tns:IOneShotService_addItemReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADDNEWReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/ADDNEWReview" message="tns:IOneShotService_ADDNEWReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/ADDNEWReviewResponse" message="tns:IOneShotService_ADDNEWReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetReviews" message="tns:IOneShotService_GetReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetReviewsResponse" message="tns:IOneShotService_GetReviews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVisitor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddVisitor" message="tns:IOneShotService_AddVisitor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddVisitorResponse" message="tns:IOneShotService_AddVisitor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegisteredUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddRegisteredUser" message="tns:IOneShotService_AddRegisteredUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddRegisteredUserResponse" message="tns:IOneShotService_AddRegisteredUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOderedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddOderedUser" message="tns:IOneShotService_AddOderedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddOderedUserResponse" message="tns:IOneShotService_AddOderedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addItemOnList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/addItemOnList" message="tns:IOneShotService_addItemOnList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/addItemOnListResponse" message="tns:IOneShotService_addItemOnList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetCustomerList" message="tns:IOneShotService_GetCustomerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetCustomerListResponse" message="tns:IOneShotService_GetCustomerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletItemONList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/DeletItemONList" message="tns:IOneShotService_DeletItemONList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/DeletItemONListResponse" message="tns:IOneShotService_DeletItemONList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnCust">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnCust" message="tns:IOneShotService_GetItemOnCust_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnCustResponse" message="tns:IOneShotService_GetItemOnCust_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllOnList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/DeleteAllOnList" message="tns:IOneShotService_DeleteAllOnList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/DeleteAllOnListResponse" message="tns:IOneShotService_DeleteAllOnList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCartQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddCartQty" message="tns:IOneShotService_AddCartQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddCartQtyResponse" message="tns:IOneShotService_AddCartQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADDItemWithQTY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/ADDItemWithQTY" message="tns:IOneShotService_ADDItemWithQTY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/ADDItemWithQTYResponse" message="tns:IOneShotService_ADDItemWithQTY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetOnCart" message="tns:IOneShotService_GetOnCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetOnCartResponse" message="tns:IOneShotService_GetOnCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getItemsonCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/getItemsonCart" message="tns:IOneShotService_getItemsonCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/getItemsonCartResponse" message="tns:IOneShotService_getItemsonCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReduceItemQTY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/ReduceItemQTY" message="tns:IOneShotService_ReduceItemQTY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/ReduceItemQTYResponse" message="tns:IOneShotService_ReduceItemQTY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/DeleteItem" message="tns:IOneShotService_DeleteItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/DeleteItemResponse" message="tns:IOneShotService_DeleteItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RmoveAllFromCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/RmoveAllFromCart" message="tns:IOneShotService_RmoveAllFromCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/RmoveAllFromCartResponse" message="tns:IOneShotService_RmoveAllFromCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MinuesCartQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/MinuesCartQty" message="tns:IOneShotService_MinuesCartQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/MinuesCartQtyResponse" message="tns:IOneShotService_MinuesCartQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnCart" message="tns:IOneShotService_GetItemOnCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemOnCartResponse" message="tns:IOneShotService_GetItemOnCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorynames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetCategorynames" message="tns:IOneShotService_GetCategorynames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetCategorynamesResponse" message="tns:IOneShotService_GetCategorynames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetOrders" message="tns:IOneShotService_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetOrdersResponse" message="tns:IOneShotService_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddTransaction" message="tns:IOneShotService_AddTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddTransactionResponse" message="tns:IOneShotService_AddTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetUserTransaction" message="tns:IOneShotService_GetUserTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetUserTransactionResponse" message="tns:IOneShotService_GetUserTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetTransactions" message="tns:IOneShotService_GetTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetTransactionsResponse" message="tns:IOneShotService_GetTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddOrder" message="tns:IOneShotService_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddOrderResponse" message="tns:IOneShotService_AddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemOnOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/AddItemOnOrder" message="tns:IOneShotService_AddItemOnOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/AddItemOnOrderResponse" message="tns:IOneShotService_AddItemOnOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/UpdateOrderStatus" message="tns:IOneShotService_UpdateOrderStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/UpdateOrderStatusResponse" message="tns:IOneShotService_UpdateOrderStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsOnOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemsOnOrder" message="tns:IOneShotService_GetItemsOnOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemsOnOrderResponse" message="tns:IOneShotService_GetItemsOnOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetAllOrders" message="tns:IOneShotService_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetAllOrdersResponse" message="tns:IOneShotService_GetAllOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetOrderByID" message="tns:IOneShotService_GetOrderByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetOrderByIDResponse" message="tns:IOneShotService_GetOrderByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetTransaction" message="tns:IOneShotService_GetTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetTransactionResponse" message="tns:IOneShotService_GetTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetMessages" message="tns:IOneShotService_GetMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetMessagesResponse" message="tns:IOneShotService_GetMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/NewMessage" message="tns:IOneShotService_NewMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/NewMessageResponse" message="tns:IOneShotService_NewMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/UpdateMessageStatus" message="tns:IOneShotService_UpdateMessageStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/UpdateMessageStatusResponse" message="tns:IOneShotService_UpdateMessageStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetMessagesDisplay" message="tns:IOneShotService_GetMessagesDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetMessagesDisplayResponse" message="tns:IOneShotService_GetMessagesDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/ClearList" message="tns:IOneShotService_ClearList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/ClearListResponse" message="tns:IOneShotService_ClearList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/IsRegistered" message="tns:IOneShotService_IsRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/IsRegisteredResponse" message="tns:IOneShotService_IsRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserIDRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/UserIDRegistered" message="tns:IOneShotService_UserIDRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/UserIDRegisteredResponse" message="tns:IOneShotService_UserIDRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsONcustomerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/GetItemsONcustomerList" message="tns:IOneShotService_GetItemsONcustomerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/GetItemsONcustomerListResponse" message="tns:IOneShotService_GetItemsONcustomerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPromoStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOneShotService/EditPromoStatus" message="tns:IOneShotService_EditPromoStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOneShotService/EditPromoStatusResponse" message="tns:IOneShotService_EditPromoStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOneShotService" type="tns:IOneShotService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPromoByID">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetPromoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemFromDB">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/deleteItemFromDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItemOnPromobyCode">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/getItemOnPromobyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromPromo">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/removeFromPromo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePromotion">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/DeletePromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCatByID">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/getCatByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPromoCode">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/getPromoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletUser">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/deletUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItembyCategory">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItembyCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLineGraphInfor">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddLineGraphInfor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPieChart">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddPieChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineGraphData">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetLineGraphData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPieChartData">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetPieChartData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnGraphData">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetColumnGraphData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPromotion">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotions">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetPromotions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionByName">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetPromotionByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByPromo">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemsByPromo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPromo">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemPromo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemOnPromotion">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddItemOnPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPromotionStatus">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/EditPromotionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnPromotions">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemOnPromotions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddress">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/UpdateAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addItemReview">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/addItemReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADDNEWReview">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/ADDNEWReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetReviews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVisitor">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddVisitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegisteredUser">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddRegisteredUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOderedUser">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddOderedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addItemOnList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/addItemOnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletItemONList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/DeletItemONList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnCust">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemOnCust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllOnList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/DeleteAllOnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCartQty">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddCartQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADDItemWithQTY">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/ADDItemWithQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnCart">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetOnCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItemsonCart">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/getItemsonCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReduceItemQTY">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/ReduceItemQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/DeleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RmoveAllFromCart">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/RmoveAllFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MinuesCartQty">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/MinuesCartQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemOnCart">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemOnCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorynames">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetCategorynames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTransaction">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTransaction">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetUserTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemOnOrder">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/AddItemOnOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/UpdateOrderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsOnOrder">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemsOnOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetOrderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewMessage">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/NewMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStatus">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/UpdateMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetMessagesDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/ClearList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRegistered">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/IsRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIDRegistered">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/UserIDRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsONcustomerList">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/GetItemsONcustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPromoStatus">
+      <soap:operation soapAction="http://tempuri.org/IOneShotService/EditPromoStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OneShotService">
+    <wsdl:port name="BasicHttpBinding_IOneShotService" binding="tns:BasicHttpBinding_IOneShotService">
+      <soap:address location="http://localhost:53584/OneShotService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,337 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="OneShot.com.index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneShot.com</title>
+    <link rel="shortcut icon" type="image" href="images/logoshortcut-removebg-preview.png">
+    <link rel="stylesheet" href="css/oneshot.css">
+    <link rel="stylesheet" href="css/oneShotResponsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/oneshott.css">
+     <link rel="stylesheet" href="css/onshopbootstrap.css">
+      <link rel="stylesheet" href="css/oneshotB.css">
+    <link rel="stylesheet" href="/css/oneshot_c_.css">
+    <link rel="stylesheet" href="/css/oneshot_a_.css">
+    <script src="/js/mainslider.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style>
+        .Province {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 83%;
+            margin-left: 0;
+            height: 20px;
+            color: rgb(0, 175, 58);
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        /* 
+        .Province option {
+            whi
+        } */
+        
+        .Province option Value {
+            color: white;
+            font-weight: bold;
+        }
+
+        .my-account-container{
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" autocomplete="off" runat="server">
+      <div class="container">
+                 <div id="mainheader" runat="server" class="header-main">
+            <div runat="server" id="top_header" class="header-main-top">
+                <div class="header-main-content">
+                    <a target="_blank" href="https://www.google.com/maps/place/Kingsway+Campus+Auckland+Park/@-26.1835909,27.9914904,15z/data=!4m9!1m2!2m1!1suniversity+of+johannesburg!3m5!1s0x0:0xff8d68c0a477737!8m2!3d-26.18359!4d27.9976812!15sChp1bml2ZXJzaXR5IG9mIGpvaGFubmVzYnVyZyIDiAEBWhwiGnVuaXZlcnNpdHkgb2Ygam9oYW5uZXNidXJnkgEKdW5pdmVyc2l0eQ">
+                        <span class="material-icons-outlined">location_on</span>
+                        <span>WEREHOUSES</span>
+                    </a>
+
+                    <button class="btn-customer-support" id="cusSupport" runat="server">
+                    <span class="material-icons">support_agent</span>
+                    <span>CUSTOMER SUPPORT</span>
+                  </button>
+
+                    <div class="content-right">
+                           <a runat="server" id="admindashboard" href="dashboard.aspx">
+                            <span class="material-icons-outlined">dashboard</span>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-outlined">lock</span>
+                            <span>SAFE & SECURE</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-outlined">sync_alt</span>
+                            <span>RETURNS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div runat="server" id="middle_header" class="header-main-middle">
+                <div class="logo">
+                    <a href="Home.html">
+                        <p class="logoo"><span style="background-color: rgb(0, 175, 58); color: white; border-radius: 5px;">One</span>Shot<span style="color:  rgb(51, 116, 182);">.com</span></p>
+                    </a>
+                </div>
+
+                <div class="right-content-links">
+                    <div id="myprofile" runat="server" class="my-account-container">
+                        <a  href="account.aspx">
+                            <span class="material-icons-outlined">account_circle</span>
+                            <span>Hi,<span id="usernameup" runat="server"></span></span>
+                        </a>
+                        <div class="myaccount-drop-down">
+                            <ul>        
+                               <li id="myaccount" runat="server">
+                                    <a href="account.aspx">
+                                     <span class="material-icons-outlined">account_circle</span>
+                                        <span class="sign-out">My Account</span>
+                                    </a>
+                                </li>
+                                <li id="myoders" runat="server">
+                                    <a href="myorders.aspx ">
+                                        <span class="material-icons-outlined">shopping_bag</span>
+                                        <span class="sign-out">My Orders</span>
+                                    </a>
+                                </li>
+                                   <li id="mylist" runat="server">
+                                    <a href="mylist.aspx">
+                                       <span class="material-icons">list</span>
+                                        <span style="margin-left:5px;" class="sign-out">My List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button runat="server" style="font-size:10px" onserverclick="btnSignOut" class="btn-sign-out">
+                                        <span class="material-icons-outlined">logout</span>
+                                        <span class="sign-out">Sign Out</span>
+                                   </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="signin" runat="server" class="sign-in-sign-up">
+                            <span class="material-icons-outlined">account_circle</span>
+                            <span>Sign in/Sign up</span>
+                   </div>
+
+                    <div style="font-size:14px" runat="server" id="userC" class="btn-myorder">
+                        <span class="material-icons-outlined">local_shipping</span>
+                        <span id="userCity" runat="server">Auckland park</span>
+                    </div>
+                    <a style="margin-left:10px;"  class="cart" href="cart.aspx" id="mycart" runat="server">
+                        <span class="material-icons-outlined">shopping_cart</span>
+                        <span id="numItemsOnCart" runat="server" class="num-on-cart">10</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="bottom-main-section">
+                <div class="category-base-container">
+                    <div class="category-base">
+                        <div class="category-burger">
+                            <a href="Shopall.aspx">
+                                <span class="material-icons-outlined">menu</span>
+                                <span>Browser Categories</span>
+                                <span id="down_burger" class="material-icons-outlined">arrow_drop_down</span>
+                                <span id="up_burger" class="material-icons-outlined">arrow_drop_up</span>
+                            </a>
+                        </div>
+                        <div class="category-drop-down">
+                            <div class="di">
+                                <a href="Shopall.aspx">View All</a>
+                            </div>
+                            <hr class="hline">
+                            <ul runat="server" id="loadDropDown">
+                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-main-links">
+                    <ul id="top-list">
+                        <li>
+                            <a href="index.aspx">All Specials</a>
+                        </li>
+                        <li><a href="Shopall.aspx">Shop now</a></li>
+                    </ul>
+
+                </div>
+                <div id="search_base" class="search-base-input">
+                    <div id="in" class="in">
+                   <!--     <input id="searchiteminput" list="searching_auto" runat="server" placeholder="I'm looking for" autocomplete="off" class="searchiteminput" type="text"> -->
+                               <input id="Text1"  list="searching_auto" class="searchiteminput" placeholder="I'm looking for"  runat="server" type="text" />
+                        </div>
+                    
+                    <button runat="server" onserverclick="btn_Search" class="btn-find-item">
+                        <span class="material-icons-outlined">search</span>
+                    </button>
+                </div>
+                <datalist runat="server" id="searching_auto">
+        
+                </datalist>
+            </div>
+
+        </div>
+        <div id="sign_background" class="background-sign"></div>
+        <div id="sign_in_pa" class="sign-in-or-register">
+            <div style="width:100%;margin: 0;" class="RegisterContainer">
+                <div style="margin: 0; background-color: transparent;" class="tobbtna">
+                    <p>Don't have an account? <a style=" color: rgb(16, 16, 121); " href="Registerfirststep.aspx ">Sign up</a></p>
+                    <span id="close" class="material-icons-outlined">close</span>
+                </div>
+                <div style="margin-top: 5px; margin-left: 26%; " class="RegisterInputs ">
+                    <h4>Sign in</h4>
+                    <p style="font-weight:lighter; font-size: 13px; border-bottom: 100px; ">Enter your profile details</p><br>
+
+                    <label for="emailaddress">Email address</label><br>
+                    <input id="emailaddress" runat="server" type="text"><br>
+                    <label for="userPassword">Password</label><br>
+                    <input id="userPassword" runat="server" type="password"><br>
+                    <button runat="server" onserverclick="btn_sign_in" class="btn__next">
+                        <span class="material-icons">lock</span>
+                        <span class="ll">Sign in</span>
+                    </button>
+                     <p id="error" runat="server" style="color:red"></p>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="mainBody">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+           <div id="footer" runat="server" class="footercontainer">
+                <div class="footer">
+              
+                    <div class="newFooter">
+                        <div class="Sec1">
+                            <h4>ABOUT US</h4>
+                            <ol>
+                                <li>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos commodi voluptatum accusamus inventore repellat nostrum pariatur deserunt!</p>
+                                </li>
+                                <li class="lllll"><span class="material-icons">place</span>66 Kingsway Ave, Auckland Park, Johannesburg, 2092</li>
+                                <li class="lllll"><span class="material-icons">phone</span>110034660</li>
+                                <li class="lllll"><a href="mailto:misomenze6@gmail.com"><span class="material-icons">email</span>oneshot@cyberknigts.co.za</a></li>
+                            </ol>
+                        </div>
+                        <div class="Sec2">
+                            <h4>INFORMATION</h4>
+                            <ol>
+
+                                <li><a href="#">Orders & Returns</a></li>
+                                <li><a href="#">Term & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                            </ol>
+                        </div>
+                        <div class="Sec3" id="services" runat="server">
+                            <h4>SERVICES</h4>
+                            <ol>
+                                <li><button class="footButtons">My Account</button></li>
+                                <li><button class="footButtons">View Cart</button></li>
+                                <li><button class="footButtons">Track Order</button></li>
+                                <li><button class="footButtons">Online support</button></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+           <div runat="server" id="cookiePolicy" class="cookie-policy">
+        <div class="cookie-btns">
+            <button runat="server" onserverclick="CookieDecline" class="btn-accept-cookie">Decline cookies</button>
+            <button class="btn-accept-cookie" runat="server" onserverclick="CookieAccept">Accept cookies</button>
+        </div>
+
+        <p>The Website uses cookies. Cookies are small text files that identify your computer to our server as a unique user when you visit certain pages on the Website and they are stored by your Internet browser on your computer’s hard drive. Cookies can
+            be used to recognize your Internet Protocol address, saving you time while you are on the Website. We only use cookies for your convenience in using the Website and not for obtaining or using any other information about you (for example targeted
+            advertising). Your browser can be set to not accept cookies, but this would restrict your use of the Website. If you want to find out more information about cookies, go to <a target="_blank" href="http://www.allaboutcookies.org ">all about cookies</a>            or to find out about removing them from your browser, go to <a target="_blank" href="http://www.allaboutcookies.org/manage-cookies/index.html">all about cookies</a> . Please note that we collect data from the Website about the use of the Website
+            using a web analysis tool that uses cookies that are (able to be) used to generate pseudonyms for a user’s profile. This means that use cookies (which may be stored on your computer after you leave the Website) can store information about
+            your visit. Please also note that our suppliers and partners may also use cookies, over which we have no control.</p>
+    </div>
+    </form>
+</body>
+    <script>
+        var backgroundd = document.getElementById("sign_background");
+        var page = document.getElementById("sign_in_pa");
+
+        var close = document.getElementById("close");
+
+        var signin = document.getElementById("signin")
+
+        function Close() {
+            backgroundd.style.display = "none";
+            page.style.display = "none";
+        }
+
+        function Open() {
+            backgroundd.style.display = "block";
+            page.style.display = "block";
+        }
+
+        signin.addEventListener("click", () => {
+            Open();
+        })
+
+        backgroundd.addEventListener("click", () => {
+            Close();
+        })
+
+        close.addEventListener("click", () => {
+            Close();
+        })
+
+        var backgroundd = document.getElementById("sign_background");
+        var page = document.getElementById("sign_in_pa");
+
+        var close = document.getElementById("close");
+
+        var signin = document.getElementById("signin")
+
+        function Close() {
+            backgroundd.style.display = "none";
+            page.style.display = "none";
+        }
+
+        function Open() {
+            backgroundd.style.display = "block";
+            page.style.display = "block";
+        }
+
+        signin.addEventListener("click", () => {
+            Open();
+        })
+
+        backgroundd.addEventListener("click", () => {
+            Close();
+        })
+
+        close.addEventListener("click", () => {
+            Close();
+        })
+    </script>
+ <script src="js/main.js"></script>
+    <script src="js/mainslider.js"></script>
+</html>

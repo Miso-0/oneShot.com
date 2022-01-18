@@ -1,0 +1,570 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.3s all;
+}
+
+.header-main {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: transparent;
+}
+
+.header-main-top {
+    width: 100%;
+    background-color: rgb(0, 175, 58);
+    float: left;
+}
+
+.header-main-content {
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* display: inline-flex;
+    align-items: center; */
+}
+
+    .header-main-content .btn-customer-support {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        display: inline-flex;
+        color: white;
+        width: 200px;
+        margin-top: 5px;
+    }
+
+        .header-main-content .btn-customer-support .material-icons {
+            margin-right: 5px;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+
+    .header-main-content .btn-customer-support {
+        font-size: 15px;
+        color: white;
+    }
+
+    .header-main-content a .material-icons-outlined {
+        margin-right: 5px;
+        font-size: 18px;
+        margin-top: 2px;
+    }
+
+    .header-main-content a {
+        text-decoration: none;
+        color: white;
+        display: inline-flex;
+        font-size: 15px;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+.content-right {
+    float: right;
+}
+
+.header-main-middle {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    height: 80px;
+    background-color: transparent;
+}
+
+    .header-main-middle .logo {
+        /* border: 1px solid red; */
+        margin-top: 20px;
+    }
+
+.right-content-links {
+    float: right;
+    margin-top: 20px;
+}
+
+    .right-content-links a {
+        display: inline-flex;
+        color: rgb(0, 175, 58);
+        text-decoration: none;
+    }
+
+    .right-content-links .btn-myorder {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        display: inline-flex;
+        margin-left: 10px;
+        color: rgb(0, 175, 58);
+        margin-right: 10px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .right-content-links .sign-in-sign-up {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        display: inline-flex;
+        margin-left: 10px;
+        color: rgb(0, 175, 58);
+        margin-right: 10px;
+        float: left;
+        cursor: pointer;
+    }
+
+.sign-in-or-register {
+    width: 650px;
+    height: 470px;
+    background-color: whitesmoke;
+    z-index: 12;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 130px;
+    display: none;
+}
+
+.background-sign {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.2;
+    cursor: pointer;
+    display: none;
+}
+
+.cart {
+    float: left;
+}
+
+    .cart .num-on-cart {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+.right-content-links .material-icons-outlined {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.my-account-container {
+    float: left;
+}
+
+    .my-account-container .myaccount-drop-down {
+        width: 150px;
+        height: auto;
+        z-index: 1;
+        float: left;
+        display: none;
+        position: absolute;
+        background-color: whitesmoke;
+        box-shadow: 0 5px 10px 0 rgb(226, 226, 226);
+    }
+
+        .my-account-container .myaccount-drop-down ul {
+            list-style: none;
+        }
+
+    .my-account-container .myaccount-drop-down {
+        width: 115px;
+        margin: 5px auto;
+        border: 4px solid whitesmoke;
+        padding: 20px;
+        text-align: left;
+        /* font-weight: 900; */
+        color: rgb(0, 175, 58);
+        font-family: arial;
+        position: absolute;
+    }
+
+        .my-account-container .myaccount-drop-down:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid whitesmoke;
+            right: 70%;
+            top: -23px;
+        }
+
+        .my-account-container .myaccount-drop-down:after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid whitesmoke;
+            right: 70%;
+            top: -18px;
+        }
+
+.myaccount-drop-down ul li {
+    margin-top: 10px;
+}
+
+    .myaccount-drop-down ul li:hover .sign-out {
+        font-size: 15px;
+    }
+
+.myaccount-drop-down .btn-sign-out {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    color: rgb(0, 175, 58);
+    cursor: pointer;
+}
+
+    .myaccount-drop-down .btn-sign-out .sign-out {
+        font-size: 17px;
+    }
+
+.my-account-container:hover .myaccount-drop-down {
+    display: block;
+}
+
+.bottom-main-section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    float: left;
+    height: 30px;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+
+    .bottom-main-section .category-burger {
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .bottom-main-section .category-burger a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(0, 175, 58);
+        }
+
+            .bottom-main-section .category-burger a .material-icons-outlined {
+                margin-right: 5px;
+            }
+
+#up_burger {
+    display: none;
+}
+
+.category-burger:hover #up_burger {
+    display: block;
+}
+
+.category-burger:hover #down_burger {
+    display: none;
+}
+
+.category-base-container {
+    float: left;
+}
+
+    .category-base-container .category-drop-down {
+        width: 350px;
+        height: auto;
+        background-color: white;
+        box-shadow: 0 20px 20px 0 rgb(185, 185, 185);
+        position: absolute;
+        z-index: 1;
+        /* margin-top: 5px; */
+        display: none;
+    }
+
+.category-base:hover .category-drop-down {
+    display: block;
+}
+
+.category-base-container .category-drop-down ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+    .category-base-container .category-drop-down ul li {
+        height: 50px;
+        width: 100%;
+        float: left;
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .category-base-container .category-drop-down ul li:hover {
+            background-color: whitesmoke;
+        }
+
+        .category-base-container .category-drop-down ul li a {
+            text-decoration: none;
+            color: rgb(0, 175, 58);
+            margin-left: 5px;
+        }
+
+        .category-base-container .category-drop-down ul li:hover a {
+            font-weight: bold;
+        }
+
+.category-drop-down .di {
+    width: 100%;
+}
+
+    .category-drop-down .di a {
+        float: right;
+        text-decoration: none;
+        margin-left: 80%;
+    }
+
+        .category-drop-down .di a:hover {
+            font-weight: bold;
+        }
+
+.top-main-links {
+    float: left;
+}
+
+    .top-main-links ul {
+        list-style: none;
+        display: inline-flex;
+        margin-left: 20px;
+        margin-top: 3px;
+    }
+
+        .top-main-links ul li {
+            margin-right: 20px;
+            transition: 0.1s all;
+        }
+
+            .top-main-links ul li a {
+                text-decoration: none;
+                color: gray;
+                transition: 0.1s all;
+            }
+
+            .top-main-links ul li:hover {
+                border-bottom: 1px ridge rgb(0, 175, 58);
+            }
+
+                .top-main-links ul li:hover a {
+                    color: rgb(0, 175, 58);
+                    font-weight: bold;
+                }
+
+.search-base-input {
+    width: 40%;
+    height: 30px;
+    background-color: whitesmoke;
+    float: right;
+    overflow: hidden;
+}
+
+.in {
+    height: 20px;
+    float: left;
+    width: 530px;
+}
+
+.search-base-input .searchiteminput {
+    width: 100%;
+    height: 29px;
+    margin: 0px;
+    top: 0;
+    float: left;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: rgb(0, 175, 58);
+    /* margin-bottom: 50px; */
+}
+
+.search-base-input .btn-find-item {
+    float: left;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(0, 175, 58);
+    margin-top: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#close {
+    float: right;
+    color: rgb(0, 175, 58);
+    margin-top: 3px;
+    cursor: pointer;
+    margin-left: 58%;
+}
+
+    #close:hover {
+        font-weight: bold;
+    }
+
+.item-view-container {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    margin-right: 5%;
+    background-color: transparent;
+    float: left;
+    margin-top: 20px;
+}
+
+.image-view {
+    width: 45%;
+    height: 500px;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 50px; */
+    border: 1px solid transparent;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+
+    .image-view img {
+        margin-top: 55px;
+    }
+
+.item-info-base {
+    width: 45%;
+    height: auto;
+    background-color: transparent;
+    float: right;
+}
+
+.top-item-info {
+    width: 97%;
+    height: auto;
+    background-color: transparent;
+    float: left;
+    padding: 10px;
+}
+
+.Item-name {
+    font-size: 20px;
+}
+
+.top-item-info ul {
+    list-style: none;
+    color: rgb(0, 175, 58);
+}
+
+    .top-item-info ul li {
+        margin-top: 20px
+    }
+
+        .top-item-info ul li a {
+            color: rgb(0, 175, 58);
+        }
+
+        .top-item-info ul li .select-qty {
+            margin: 0;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            outline: none;
+            color: rgb(0, 175, 58);
+            border: 1px solid rgb(0, 175, 58);
+        }
+
+        .top-item-info ul li .btn-add-cart {
+            width: 300px;
+            height: 50px;
+            margin-left: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: rgb(0, 175, 58);
+            color: white;
+            font-weight: bold;
+        }
+
+        .top-item-info ul li .add-to-list .material-icons {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .top-item-info ul li .add-to-list {
+            width: 125px;
+            height: 50px;
+            margin-left: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: rgb(0, 175, 58);
+            font-weight: bold;
+            border: 1px solid rgb(0, 175, 58);
+            background-color: transparent;
+            display: inline-flex;
+            align-items: center;
+        }
+
+.accordian-base {
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.accordion {
+    background-color: white;
+    color: rgb(0, 175, 58);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-bottom: 1px solid whitesmoke;
+}
+
+    .accordion .material-icons-outlined {
+        font-weight: bold;
+        transition: 0.3s all;
+        float: right;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: rgb(228, 228, 228);
+        font-weight: bold;
+    }
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    color: rgb(0, 175, 58);
+}
+
+.recomadations {
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    height: 500px;
+}
+
+.Reviews-view {
+    width: 100%;
+    height: auto;
+    float: left;
+}

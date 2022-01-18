@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="OneShot.com.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+     <link rel="shortcut icon" type="image" href="images/logoshortcut-removebg-preview.png">
+       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/onshopbootstrap.css">
+    <asp:ContentPlaceHolder ID="head2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="MainAdminDisplay">
+                <div class="sideNav">
+            <div class="topLogo">
+                <a id="homeLogo" href="Home.html">
+                    <p style="color: white; font-weight: bold;"><span style="background-color: white; color: rgb(0, 175, 58); border-radius: 5px;">One</span>Shot.com</span>
+                    </p>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="dashboard.aspx">
+                        <span class="material-icons">dashboard</span>
+                        <span class="names">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.aspx">
+                        <span class="material-icons">manage_accounts</span>
+                        <span class="names">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.aspx">
+                        <span class="material-icons">grading</span>
+                        <span class="names">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">ad_units</span>
+                        <span class="names">Banners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products.aspx">
+                        <span class="material-icons">precision_manufacturing</span>
+                        <span class="names">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="promotions.aspx">
+                        <span class="material-icons">auto_awesome</span>
+                        <span class="names">Promotions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="onlinesupport.aspx">
+                        <span class="material-icons">support_agent</span>
+                        <span class="names">Customer support</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="transactions.aspx">
+                        <span class="material-icons">receipt_long</span>
+                        <span class="names">Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.aspx">
+                        <span class="material-icons">layers</span>
+                        <span class="names">Open website</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

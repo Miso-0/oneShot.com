@@ -1,0 +1,2114 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.3s all;
+}
+
+.headerMain {
+    width: 100%;
+    height: auto;
+    background: whitesmoke;
+    overflow: hidden;
+    transition-property: display;
+    transition-duration: 50s;
+}
+
+.topsection {
+    width: 100%;
+    height: 60px;
+    background: rgb(0, 175, 58);
+}
+
+.middleSection {
+    width: 100%;
+    height: 70px;
+    background: whitesmoke;
+}
+
+.bottomSection {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+}
+
+.category {
+    width: 15%;
+    height: 50px;
+    background: rgb(0, 175, 58);
+    float: left;
+    cursor: pointer;
+    /* overflow: hidden; */
+    transition: 05s all;
+    /* margin-left: 1%; */
+}
+
+    .category a {
+        text-decoration: none;
+    }
+
+.topNav {
+    width: 85%;
+    height: 40px;
+    background: whitesmoke;
+    float: left;
+    display: flex;
+    padding-top: 10px;
+}
+
+.burger {
+    padding: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+}
+
+.mainNavBase {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: whitesmoke;
+}
+
+.bannertop {
+    width: 100%;
+    height: 400px;
+    background: white;
+    /* float: left; */
+    /* margin-top: 20px; */
+}
+
+.catlist {
+    display: none;
+    width: 230px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgb(105, 233, 116);
+    /* padding: 12px 16px; */
+    z-index: 1;
+    overflow: hidden;
+}
+
+    .catlist ul {
+        margin-top: 5px;
+        list-style: none;
+    }
+
+        .catlist ul li {
+            width: 100%;
+            height: 50px;
+            /* margin-left: 20px; */
+            display: inline-flex;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+            .catlist ul li a {
+                display: inline-flex;
+                text-decoration: none;
+                color: rgb(16, 16, 121);
+                margin-left: 20px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            .catlist ul li:hover {
+                background-color: rgb(208, 255, 223);
+            }
+
+
+/* 
+.CategoryA:hover .catlist {
+    display: inline-block;
+    position: absolute;
+} */
+
+#down {
+    display: none;
+    background: rgb(236, 233, 233);
+    color: rgb(0, 175, 58);
+    border-radius: 50%;
+}
+
+.CategoryA:hover #up {
+    display: none;
+}
+
+.CategoryA:hover #down {
+    display: block;
+}
+
+#down1 {
+    display: none;
+    background: rgb(236, 233, 233);
+    color: rgb(0, 175, 58);
+    border-radius: 50%;
+}
+
+.category:hover #up1 {
+    display: none;
+}
+
+.category:hover #down1 {
+    display: block;
+}
+
+.sub_category_A {
+    margin-left: 220px;
+    width: 240px;
+    display: none;
+    background: greenyellow;
+}
+
+#cat1:hover .sub_category_A {
+    display: block;
+    position: absolute;
+}
+
+.topNav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+    .topNav ul li a {
+        text-decoration: none;
+    }
+
+.topNavLink {
+    margin-left: 50px;
+    font-weight: bold;
+    color: grey;
+}
+
+    .topNavLink:hover {
+        border-bottom: 1px solid rgb(0, 175, 58);
+        color: rgb(16, 16, 121);
+    }
+
+.topsection {
+    text-align: right;
+}
+
+
+/* .topsection ul {
+    display: inline-flex;
+    list-style: none;
+     margin-top: 10px; 
+
+margin-right: 80px;
+
+}
+.topsection ul li a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+*/
+
+.signIN {
+    display: inline-flex;
+}
+
+    .signIN:hover #up {
+        display: none;
+    }
+
+    .signIN:hover #down {
+        display: block;
+    }
+
+.signInForm {
+    width: 200px;
+    height: 150px;
+    background: rgb(0, 175, 58);
+    text-align: left;
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+    color: whitesmoke;
+    opacity: 0.9;
+    padding-top: 50px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#si:hover .signInForm {
+    display: block;
+    position: absolute;
+}
+
+.btn_1 {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 175, 58);
+    color: white;
+    border: none;
+    box-shadow: inset 0 0 0 0 wheat;
+    outline: none;
+    transition: ease-out 1s;
+    margin-left: 50px;
+    margin-top: 10px;
+    /* border-radius: 5px; */
+    font-weight: bold;
+}
+
+    .btn_1:hover {
+        box-shadow: inset 0 10px 0 50px white;
+        cursor: pointer;
+        color: green;
+    }
+
+.btn_2 {
+    width: 100px;
+    height: 40px;
+    border: 3px solid rgb(0, 175, 58);
+    outline: none;
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+    .btn_2:hover {
+        color: white;
+    }
+
+    .btn_2:before {
+        transition: 0.5 all ease;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        content: "";
+        opacity: 0;
+        background-color: #42FBF2;
+    }
+
+        .btn_2:before:hover {
+            transition: 0.9s all ease;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            opacity: 1;
+        }
+
+.SignInputs {
+    background: rgb(105, 233, 116);
+    border: none;
+    border-radius: 2px;
+    width: 90%;
+    height: 25px;
+    margin-bottom: 10px;
+    outline: none;
+    color: white;
+}
+
+.logo {
+    width: 15%;
+    /* height: 100px; */
+    float: left;
+    background-color: transparent;
+}
+
+.middlesectionContent {
+    width: 85%;
+    height: 150px;
+    float: left;
+    background-color: transparent;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo p {
+    /* margin-top: 45px; */
+    margin-left: 2%;
+    color: rgb(16, 16, 121);
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.searchBarPlaceHolder {
+    width: 60%;
+    height: 150px;
+    float: left;
+    background-color: transparent;
+    text-align: center;
+}
+
+.cartPlace {
+    width: 40%;
+    height: 150px;
+    float: left;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnSearchBY {
+    border: none;
+    background-color: transparent;
+    border-radius: 60%;
+    color: rgb(16, 16, 121);
+    cursor: pointer;
+}
+
+.Sbar_base {
+    border: 1px solid rgb(16, 16, 121);
+    display: inline-flex;
+    /* width: 100%; */
+    width: 73%;
+    margin-top: 60px;
+    /* padding-left: 5px; */
+    /* text-align: center;
+align-items: center; */
+}
+
+#InputSearch {
+    width: 550px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    color: rgb(16, 16, 121);
+    margin-left: 10px;
+}
+
+#btnProcced {
+    border: none;
+    background-color: transparent;
+    color: rgb(16, 16, 121);
+    cursor: pointer;
+}
+
+.cartPlace a span {
+    font-size: 45px;
+    margin-left: 40px;
+}
+
+#track {
+    width: 90px;
+    height: 38px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-left: 15px; */
+}
+
+#MyList {
+    width: 90px;
+    height: 38px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-left: 15px; */
+}
+
+.track span {
+    margin-top: 7px;
+    margin-left: 18px;
+    margin-right: 5px;
+}
+
+.track {
+    width: 150px;
+    height: 38px;
+    background-color: rgb(16, 16, 121);
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+    display: inline-flex;
+}
+
+
+/* slider banner */
+
+.container_slider {
+    width: 90%;
+    margin: auto;
+}
+
+.carousel {
+    /* border: 2px solid #ccc; */
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    width: 400%;
+    border: none;
+    transition: all 0.3s;
+}
+
+    .slider section {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: rgb(0, 175, 58);
+}
+
+.controls ul {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+    .controls ul li {
+        width: 10px;
+        height: 10px;
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 10px;
+        background: rgb(121, 121, 121);
+        cursor: pointer;
+    }
+
+        .controls ul li.selected {
+            background: transparent;
+        }
+
+.controls .arrow span {
+    font-size: 40px;
+    opacity: 0.1;
+    transition: opacity 1.5s;
+}
+
+    .controls .arrow span:hover {
+        opacity: 1;
+    }
+
+.arrow.left {
+    left: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.arrow.right {
+    right: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* .SpecialSectionOne {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+    /* margin-left: 2%; 
+    background-color: white;
+}
+
+.SpecialSectionTwo {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+    /* margin-left: 2%; 
+    background-color: white;
+}
+
+.SpecialSectionThree {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+    /* margin-left: 2%; 
+    background-color: white;
+} */
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    float: left;
+    margin-top: 20px;
+}
+
+.topLabel {
+    width: 100%;
+    height: 30px;
+    background-color: whitesmoke;
+    display: inline-flex;
+    padding-left: 50px;
+    float: left;
+    color: rgb(16, 16, 121);
+}
+
+    .topLabel a {
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 85%;
+        color: rgb(16, 16, 121);
+    }
+
+.ImgV {
+    width: 100%;
+    height: 190px;
+    /* margin-left: 2%; */
+}
+
+    .ImgV img {
+        width: 185px;
+        height: 190px;
+        margin-top: 10px;
+        /* margin-left: 1%; */
+        float: left;
+    }
+
+.itemDetails {
+    width: 80%;
+    height: 150px;
+    background-color: transparent;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(16, 16, 121);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+    .itemDetails ul li {
+        margin-bottom: 7px;
+    }
+
+    .itemDetails ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+#Minus,
+#Add {
+    background: transparent;
+    border: none;
+    color: rgb(0, 175, 58);
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#numITemsToAdd {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#addToCart {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background: rgb(0, 175, 58);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#AddToMyList {
+    width: 80%;
+    height: 40px;
+    border: none;
+    background: rgb(0, 175, 58);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.ViewItem {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(16, 16, 121);
+}
+
+.item_row {
+    width: 100%;
+    height: auto;
+    margin-left: 5%;
+}
+
+
+/* Home styles end  */
+
+
+/* Shop Now all styles starts here */
+
+.FilterSideBar {
+    width: 15%;
+    height: auto;
+    background: white;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow:0 1px 1px 1px whitesmoke;
+    /* margin-left: 2%; */
+}
+
+.topFilterContainer {
+    width: 78.8%;
+    height: 50px;
+    background: white;
+    float: left;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+
+    margin-left: 0.9%;
+    box-shadow: 0 1px 1px 1px whitesmoke;
+}
+
+    .topFilterContainer .ShowFilter {
+        border: none;
+    }
+
+    .topFilterContainer h4,
+    select {
+        margin-left: 10px;
+    }
+
+#nToShow {
+    background: transparent;
+    border: 1px solid rgb(16, 16, 121);
+    outline: none;
+    width: 60px;
+    height: 30px;
+}
+
+.topFilterContainer #nToShow select option {
+    color: rgb(16, 16, 121);
+}
+
+.MainItemDispleyerC {
+    width: 79%;
+    height: auto;
+    background-color: transparent;
+    float: left;
+    margin-left: 0.9%;
+    margin-top: 10px;
+}
+
+.MainItemDispleyerA {
+    width: 76%;
+    height: auto;
+    background: transparent;
+    float: left;
+    margin-left: 1%;
+}
+
+.filterbyCat {
+    width: 98%;
+    height: auto;
+    float: left;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.filterbyOnSpecial {
+    width: 98%;
+    height: auto;
+    float: left;
+    background: white;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.filterbyPrice {
+    width: 98%;
+    height: auto;
+    float: left;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.filterbyCat,
+.filterbyOnSpecial,
+.filterbyPrice {
+    text-align: left;
+    background-color: white;
+}
+
+.FilterSideBar ul {
+    list-style: none;
+    margin-left:10px;
+}
+
+    .FilterSideBar ul li {
+        margin-top: 5px;
+    }
+
+        .FilterSideBar ul li a {
+            text-decoration: none;
+            color: rgb(0, 175, 58);
+            font-size: 14px;
+        }
+
+.topFilterLabel {
+    width: 100%;
+    height: 40px;
+    background:white;
+    float: left;
+    color: rgb(0, 175, 58);
+    border-bottom: 1px solid rgb(0, 175, 58);
+}
+
+    .topFilterLabel h5 {
+        margin-top: 10px;
+        margin-left:10px;
+    }
+
+
+/* Admin pages */
+
+.headerNav {
+    width: 85%;
+    height: 50px;
+    float: left;
+    background: whitesmoke;
+    color: rgb(0, 175, 58);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sideNav {
+    width: 14.5%;
+    min-height: 900px;
+    height: auto;
+    float: left;
+    background: whitesmoke;
+    transition: 0.5s width;
+}
+
+.MainDisplay {
+    width: 85%;
+    height: auto;
+    float: left;
+    background: white;
+    color: rgb(0, 175, 58);
+}
+
+.lblTop {
+    width: 100%;
+    height: 50px;
+    float: left;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: space-evenly;
+    color: rgb(0, 175, 58);
+    align-items: center;
+}
+
+    .lblTop .material-icons {
+        margin-left: 55px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .lblTop a {
+        text-decoration: none;
+        color: rgb(0, 175, 58);
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+.sideNav ul {
+    list-style: none;
+}
+
+.NavbtnContainer {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+    .NavbtnContainer ul li {
+        background-color: transparent;
+        color: rgb(0, 175, 58);
+        height: 50px;
+        margin-top: 20px;
+    }
+
+        .NavbtnContainer ul li:last-child {
+            margin-bottom: 20px;
+        }
+
+        .NavbtnContainer ul li:hover {
+            background-color: whitesmoke;
+        }
+
+#MenuView {
+    display: none;
+    margin-right: 60%;
+}
+
+.NavbtnContainer ul li a {
+    text-decoration: none;
+    display: inline-flex;
+    color: rgb(0, 175, 58);
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+    .NavbtnContainer ul li a span {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+
+/* Product maneger */
+
+.headerNav h4 {
+    margin-left: 70%;
+}
+
+    .headerNav h4 a {
+        color: rgb(0, 175, 58);
+        text-decoration: none;
+        display: inline-flex;
+    }
+
+        .headerNav h4 a span {
+            margin-right: 5px;
+        }
+
+.CategoryView {
+    width: 70%;
+    height: auto;
+    float: left;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    /* margin-left: 1%; */
+}
+
+.Totals {
+    width: 29%;
+    height: 200px;
+    background-color: whitesmoke;
+    float: left;
+    margin-left: 1%;
+    /* border-radius: 10px; */
+    margin-top: 5px;
+}
+
+.mainContainer table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.mainContainer td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.mainContainer tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.Totals table {
+    color: rgb(0, 175, 58);
+}
+
+.mainContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.CategoryView th {
+    color: rgb(0, 175, 58);
+}
+
+th,
+tr,
+td {
+    text-align: center;
+    /* border-bottom: 0.5px solid rgb(0, 175, 58); */
+}
+
+.Totals table tr,
+td,
+th {
+    text-align: center;
+    border-bottom: none;
+}
+
+.Totals table {
+    margin-top: 20px;
+}
+
+.Totals td {
+    height: 60px;
+}
+
+.mainContainer tr td ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+    .mainContainer tr td ul li a {
+        text-decoration: none;
+        color: rgb(0, 175, 58);
+    }
+
+        .mainContainer tr td ul li a span:last-child {
+            margin-left: 10px;
+        }
+
+.mainContainer table tr img {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+}
+
+
+/* #quantityProgressBar{
+width: ;
+} */
+
+.MessageSection {
+    width: 70%;
+    min-height: 440px;
+    height: auto;
+    background-color: white;
+    box-shadow:0 10px 10px 10px whitesmoke;
+    float: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+}
+
+.Usertext {
+    float: left;
+    text-align: left;
+    padding: 15px;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.ManagerReply {
+    float: right;
+    text-align: right;
+    padding: 15px;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.Usertext {
+    width: 50%;
+    min-height: 50px;
+    height: auto;
+    background: rgb(194, 180, 180);
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .Usertext:before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 26px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 26px solid rgb(194, 180, 180);
+        border-bottom: 13px solid transparent;
+    }
+
+.ManagerReply {
+    width: 55%;
+    min-height: 50px;
+    height: auto;
+    margin-right:20px;
+    background: rgb(0, 175, 58);
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .ManagerReply:before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 26px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-left: 26px solid rgb(0, 175, 58);
+        border-bottom: 13px solid transparent;
+    }
+
+.BottomSectionInputAndButtons {
+    width: 70%;
+    height: 40px;
+    background-color: white;
+    box-shadow:0 10px 10px 10px whitesmoke;
+    float: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    display: inline-flex;
+}
+
+.MainDisplay .UserInputSupport {
+    width: 85%;
+    height: auto;
+    border: none;
+    outline: none;
+    background: whitesmoke;
+    color: rgb(0, 175, 58);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.MainDisplay .btnsend {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(0, 175, 58);
+    color: white;
+    border: none;
+    box-shadow: inset 0 0 0 0 wheat;
+    outline: none;
+    transition: ease-out 1s;
+    margin-left: 20px;
+    /* margin-top: 10px; */
+    /* border-radius: 5px; */
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+    #btnsend:hover {
+        box-shadow: inset 0 10px 0 50px rgb(16, 16, 121);
+        cursor: pointer;
+        color: white;
+    }
+
+.ItemViewMainBody {
+    width: 60%;
+    height: auto;
+    float: left;
+    margin-left: 10%;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: rgb(0, 175, 58);
+}
+
+.TrolleySection {
+    width: 20%;
+    height: auto;
+    float: left;
+    background: transparent;
+    border: 1px solid rgb(0, 175, 58);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imageViewContainer {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(0, 175, 58);
+    /* background: gray; */
+    float: left;
+}
+
+    .imageViewContainer img {
+        width: 100%;
+        height: 300px;
+    }
+
+.NameAndBtns {
+    width: 500px;
+    height: 300px;
+    background: transparent;
+    float: left;
+    margin-left: 60px;
+    text-align: left;
+}
+
+#addToCartItemView {
+    width: 400px;
+    height: 50px;
+    background: rgb(0, 175, 58);
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.NameAndBtns ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+    .NameAndBtns ul li {
+        margin-top: 25px;
+    }
+
+#AddtoLists {
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgb(0, 175, 58);
+    background: transparent;
+    color: rgb(0, 175, 58);
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.BottomInformation {
+    width: 100%;
+    height: auto;
+    background: whitesmoke;
+    float: left;
+    margin-top: 10px;
+}
+
+.lblD {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+}
+
+.toplb {
+    width: 250px;
+    height: 30px;
+    background-color: whitesmoke;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.la {
+    width: 100%;
+    height: 40px;
+    background: whitesmoke;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    color: rgb(0, 175, 58);
+}
+
+    .la span {
+        margin-left: 100px;
+        margin-right: 10px;
+    }
+
+.totalCalculations {
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    /* padding: 10px; */
+    color: rgb(0, 175, 58);
+}
+
+.trolleyItems {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    background: transparent;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(0, 175, 58);
+}
+
+    .trolleyItems ul {
+        list-style: none;
+    }
+
+.totalCalculations table {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+    .totalCalculations table tr,
+    td {
+        color: rgb(0, 175, 58);
+        border: none;
+        text-align: left;
+    }
+
+.trolleyItems ul {
+    list-style: none;
+}
+
+.Item {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: whitesmoke;
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid rgb(0, 175, 58); */
+    /*  border-top: 1px solid rgb(0, 175, 58); */
+    margin-top: 5px;
+    color: rgb(0, 175, 58);
+}
+
+#btnUpdate {
+    border: none;
+    outline: none;
+    background: rgb(0, 175, 58);
+    color: whitesmoke;
+    font-weight: bold;
+    width: 70px;
+    cursor: pointer;
+}
+
+.Item select {
+    background: whitesmoke;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 175, 58);
+    font-weight: bold;
+}
+
+    .Item select option {
+        border: none;
+        cursor: pointer;
+    }
+
+.CartView {
+    width: 60%;
+    height: auto;
+    background-color: white;
+    float: left;
+    margin-left: 5%;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+}
+
+.CartTotalCalculations {
+    width: 25%;
+    height: 150px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: whitesmoke;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.CartEachItem {
+    width: 100%;
+    height: 150px;
+    float: left;
+    /* border: 1px solid rgb(0, 175, 58); */
+    overflow: hidden;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    color: rgb(0, 175, 58);
+    /* border-radius: 5px; */
+}
+
+    .CartEachItem img {
+        width: 150px;
+        height: 150px;
+        float: left;
+    }
+
+.ItemNames {
+    width: 400px;
+    height: 150px;
+    float: left;
+    margin-top: 10px;
+}
+
+.CartItemPrice {
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin-left: 150px;
+    background-color: transparent;
+    text-align: right;
+}
+
+    .CartItemPrice select {
+        background: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: rgb(0, 175, 58);
+        font-weight: bold;
+    }
+
+        .CartItemPrice select option {
+            border: none;
+            cursor: pointer;
+        }
+
+#deleteFromCart {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: rgb(0, 175, 58);
+}
+
+.CartItemPrice .actionsCart {
+    display: inline-flex;
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+.actionsCart ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+    .actionsCart ul li button {
+        cursor: pointer;
+    }
+
+    .actionsCart ul li span {
+        margin-right: 10px;
+        color: rgb(0, 175, 58);
+    }
+
+    .actionsCart ul li {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+
+.CartTotalCalculations h3 {
+    margin-left: 30%;
+    color: rgb(0, 175, 58);
+}
+
+.CartTotalCalculations .btnProccedBuy {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 175, 58);
+    font-weight: bold;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.tt {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    color: rgb(0, 175, 58);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.PieChart {
+    width: 400px;
+    height: 250px;
+    float: left;
+    background-color: whitesmoke;
+    margin-left: 10px;
+    margin-top: 10px;
+  /*  border: 0.5px solid rgb(0, 175, 58);*/
+}
+
+
+/* .MainDisplay {
+    background-color: red;
+} */
+
+.LineGraph {
+    width: 600px;
+    height: 500px;
+    float: left;
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    /*border: 0.5px solid rgb(0, 175, 58);*/
+}
+
+.ColumnV {
+    width: 690px;
+    height: 500px;
+    float: left;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    background-color: transparent;
+   /* border: 0.5px solid rgb(0, 175, 58);*/
+}
+
+.termCond {
+    width: 60%;
+    height: 27px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(0, 175, 58);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    display: inline-flex;
+    font-weight: bold;
+}
+
+    .termCond a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .termCond p {
+        margin-left: 27%;
+        color: white;
+    }
+
+    .termCond i {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+.pagesHeader {
+    display: inline-flex;
+    color: rgb(0, 175, 58);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+    /* .pagesHeader span:first-child {
+    /* margin-right: 5px; 
+} */
+
+    .pagesHeader span {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+.CompanyInformation {
+    width: 80%;
+    height: 0px;
+    margin-left: 10%;
+    margin-top: 10px;
+    /* background-color: red; */
+    display: block;
+    overflow: hidden;
+    border: 0.1px solid rgb(0, 175, 58);
+}
+
+    .CompanyInformation ol {
+        list-style: none;
+    }
+
+        .CompanyInformation ol li {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+.RecentTransectionsTable {
+    width: 890px;
+    height: 400px;
+    float: left;
+    margin-left: 21px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+.Infor {
+    width: 97%;
+    height: 60px;
+    float: left;
+    background-color: whitesmoke;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* border: 0.5px solid rgb(0, 175, 58); */
+    overflow: hidden;
+}
+
+.TRevenue {
+    width: 300px;
+    height: 60px;
+    border-left: 0.5px solid rgb(0, 175, 58);
+    border-right: 0.5px solid rgb(0, 175, 58);
+    float: left;
+    margin-left: 100px;
+    /* display: inline-flex;
+    justify-content: space-evenly; */
+}
+
+.RecentTransectionsTable table {
+    margin-top: 10px;
+}
+
+.RecentTransectionsTable table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.RecentTransectionsTable td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.RecentTransectionsTable tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.footer table {
+    width: 100%;
+    height: auto;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(0, 175, 58);
+}
+
+
+/* .footer table th {
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(16, 16, 121);
+    border-collapse: unset;
+}
+ */
+
+.footercontainer .footer table th,
+td {
+    text-align: center;
+    border: none;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+}
+
+.footer table tr td a {
+    text-decoration: none;
+    color: rgb(0, 175, 58);
+    /* font-weight: bold; */
+    display: inline-flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+    .footer table tr td a span {
+        margin-right: 10px;
+    }
+
+.RegisterContainer {
+    width: 40%;
+    height: 500px;
+    margin-bottom: 200px;
+    background-color: transparent;
+    float: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+    /* text-align: center; */
+    font-weight: bold;
+    color: rgb(0, 175, 58);
+}
+
+.RegisterInputs input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: rgb(105, 233, 116);
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.RegisterInputs {
+    width: 50%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 10px;
+    margin-bottom:100px;
+}
+
+.tobbtna {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    padding: 5px;
+    display: inline-flex;
+}
+
+    .tobbtna a {
+        text-decoration: none;
+    }
+
+.RegisterInputs .btn_next {
+    width: 100px;
+    height: 50px;
+    background: rgb(0, 175, 58);
+    display: inline-flex;
+    /* justify-content: space-evenly; */
+    color: white;
+    /* font-size: 20px; */
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btnNext span {
+    margin-top: 15px;
+}
+
+.btnNext #btnNext {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+
+/* Track order styles */
+
+.TrackContainer {
+    width: 60%;
+    height: 600px;
+    background-color: whitesmoke;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+
+.OrderProgress {
+    width: 60%;
+    height: 600px;
+    float: left;
+    background-color: whitesmoke;
+}
+
+.OrderInfromation {
+    width: 40%;
+    height: 600px;
+    float: left;
+    background-color: rgb(136, 136, 86);
+}
+
+.orderProBase {
+    color: rgb(0, 175, 58);
+    background-color: transparent;
+}
+
+.truckTrack {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.LocContainer {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+#loc {
+    transition: 5s margin-left;
+    /* animation: Sizer 4s linear infinite; */
+}
+
+#truck {
+    transition: 20s margin-left;
+    animation: Sizer 4s linear infinite;
+}
+
+@keyframes Sizer {
+    0% {
+        font-size: 25px;
+    }
+
+    25% {
+        font-size: 15px;
+    }
+
+    50% {
+        font-size: 25px;
+    }
+
+    75% {
+        font-size: 15px;
+    }
+
+    100% {
+        font-size: 25px;
+    }
+}
+
+.protBar {
+    width: 0%;
+    height: 20px;
+    background-color: rgb(0, 175, 58);
+    float: left;
+    transition: 5s width;
+}
+
+.proTrack {
+    width: 100%;
+    height: 20px;
+    float: left;
+    background-color: rgb(138, 30, 30);
+}
+
+.subTitlesCon {
+    width: 100%;
+    height: 30px;
+    float: left;
+    display: inline-flex;
+}
+
+.BttomSectionA {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    float: left;
+    background-color: transparent;
+}
+
+.middlesecA {
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+}
+
+.CategoryA {
+    width: 20%;
+    height: 50px;
+    background-color: rgb(0, 175, 58);
+    float: left;
+    color: white;
+}
+
+.BottomNavA {
+    width: 80%;
+    height: 50px;
+    float: left;
+    background-color: transparent;
+}
+
+.mainBodyA {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    background-color: transparent;
+    float: left;
+}
+
+.topSliderBannerContainer {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.SearchBarContA {
+    width: 45%;
+    height: 50px;
+    float: left;
+    border: 1px solid whitesmoke;
+    margin-left: 5%;
+    /* margin-top: 45px; */
+}
+
+.cartButtonsContA {
+    width: 30%;
+    height: 50px;
+    float: left;
+    border: 1px solid whitesmoke;
+    margin-left: 3%;
+    /* margin-top: 45px; */
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.TrackOderAButtonCont,
+.MyListAButtonCont,
+.CartAButtonCont {
+    width: 130px;
+    height: 40px;
+    background-color: transparent;
+    float: left;
+    display: inline-flex;
+    justify-content: space-evenly;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    background-color: rgb(0, 175, 58);
+}
+
+.btnTotp {
+    display: inline-flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bolder;
+    color: white;
+}
+
+    .btnTotp .material-icons {
+        font-size: 20px;
+        margin-right: 4px;
+    }
+
+.CartAButtonCont {
+    background-color: transparent;
+}
+
+    .CartAButtonCont a {
+        text-decoration: none;
+        color: rgb(0, 175, 58);
+        /* font-weight: bold; */
+    }
+
+    .CartAButtonCont .numbers {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+.inpCont {
+    width: 94%;
+    margin-left: 5%;
+    height: 40px;
+    border: 1px solid rgb(0, 175, 58);
+    display: inline-flex;
+    align-items: center;
+}
+
+    .inpCont input {
+        padding-left: 10px;
+        width: 92%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+.fin {
+    text-decoration: none;
+    color: rgb(0, 175, 58);
+}
+
+    .fin span {
+        /* font-weight: bold; */
+        font-size: 30px;
+    }
+
+.BrowserList {
+    width: 285px;
+    height: auto;
+    background-color: whitesmoke;
+    position: absolute;
+    margin-top: 11px;
+    display: none;
+    z-index: 1;
+}
+
+.CategoryA {
+    cursor: pointer;
+}
+
+    .CategoryA a {
+        display: inline-flex;
+        margin-left: 15%;
+        justify-content: space-evenly;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .CategoryA:hover .BrowserList {
+        display: block;
+    }
+
+.BottomNavA {
+    display: inline-flex;
+    /* align-items: center; */
+}
+
+.tlinks {
+    margin-top: 10px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: grey;
+    transition: 0.3s border-bottom;
+}
+
+    .tlinks:hover {
+        color: rgb(0, 175, 58);
+        border-bottom: 5px solid rgb(0, 175, 58);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+.TopName {
+    width: 100%;
+    display: inline-flex;
+    float: left;
+    margin-bottom: 10px;
+    color: rgb(0, 175, 58);
+    /* background-color: rgb(0, 175, 58); */
+    font-weight: bolder;
+}
+
+.hline {
+    background-color: rgb(16, 16, 121);
+    opacity: 0.3;
+}
+
+.TopName a {
+    text-decoration: none;
+    margin-left: 90%;
+    color: rgb(16, 16, 121);
+    font-weight: bold;
+}
+
+.SpRow {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.BrowserList ul {
+    list-style: none;
+    margin: 0;
+}
+
+    .BrowserList ul li {
+        height: 50px;
+    }
+
+        .BrowserList ul li:hover a {
+            color: rgb(0, 175, 58);
+            font-weight: bold;
+        }
+
+        .BrowserList ul li a {
+            color: grey;
+            font-weight: normal;
+        }
+
+.di {
+    display: inline-flex;
+    width: 100%;
+}
+
+    .di a {
+        font-weight: normal;
+        color: rgb(0, 175, 58);
+        font-size: 12px;
+        margin-top: 13px;
+    }
+
+.ShopAllMain {
+    width: 95%;
+    height: auto;
+    margin-left: 5%;
+    background-color: white;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 10px;
+    float: left;
+    background-color: red;
+}
+
+.itemDetails .btnAddToCartItem {
+    background-color: rgb(0, 175, 58);
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 1px;
+}

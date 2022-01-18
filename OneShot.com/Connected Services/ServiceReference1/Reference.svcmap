@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="96bc83ee-5c4f-4d86-b2c2-ae4ec92ed12d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53584/OneShotService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OneShotService.wsdl" MetadataType="Wsdl" ID="a07fa74c-a367-4ade-a920-2ca9168f9bff" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?wsdl" />
+    <MetadataFile FileName="OneShotService.disco" MetadataType="Disco" ID="ae572ea6-24a5-4ee8-8217-51e69e4cd6a1" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?disco" />
+    <MetadataFile FileName="OneShotService3.xsd" MetadataType="Schema" ID="1de2c236-fd40-49b9-addf-18f43e64bfb8" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OneShotService.xsd" MetadataType="Schema" ID="40d31a96-99f1-46d1-8058-9ee18d08ccfd" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OneShotService1.xsd" MetadataType="Schema" ID="0e8b33cf-c865-4c91-aaa7-cd2266648b39" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OneShotService2.xsd" MetadataType="Schema" ID="0d6cf4c3-cdf9-4a81-a92d-b7cab0c981f0" SourceId="1" SourceUrl="http://localhost:53584/OneShotService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
