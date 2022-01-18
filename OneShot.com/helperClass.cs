@@ -64,18 +64,18 @@ namespace OneShot.com
        
             SmtpClient client = new SmtpClient()
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
+                Host = "smt",
+                Port = Port,
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential()
                 {
-                    UserName="220034828@student.uj.ac.za",
-                    Password= "zlisrzwmvjwwvccb"
+                    UserName="email-address",
+                    Password= "password"
                 }
             };
-            MailAddress fromEmail = new MailAddress("220034828@student.uj.ac.za", "OneShot.com");
+            MailAddress fromEmail = new MailAddress("email-address", "OneShot.com");
             MailAddress ToEmail = new MailAddress(toEmail,CustomerName);
             MailMessage message = new MailMessage()
             {
